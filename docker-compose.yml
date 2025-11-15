@@ -1,0 +1,17 @@
+version: '3.8'
+ 
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+    networks:
+      - flask_network
+ 
+networks:
+  flask_network:
+    driver: bridge
+
+ 
