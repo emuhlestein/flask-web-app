@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home():
     return "Hello, Flask with Docker!"
 
+@app.route('/about')
+def about():
+    return "<p>The About page</p>"
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
